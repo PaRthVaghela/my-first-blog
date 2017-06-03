@@ -22,8 +22,10 @@ from login import views
 urlpatterns = [
     #url(r'^check/', views.check),
     #url(r'^check/name=(<name>[a-z A-Z]+)&username=(<username>[a-zA-Z_]+)&password=(<password>[A-Za-z0-9@#$%^&+=]{8,})&college=(<college>[a-zA-Z_]+)',views.add),
-    url(r'add/'+'name='+'(?P<name>[a-z A-Z]+)&'+'username='+'(?P<username>[a-z A-Z_]*)&'+'password='+'(?P<password>[A-Za-z0-9@#$%^&+=]{8,})&'+'college='+'(?P<college>[a-zA-Z_]+)',views.add),
-    
+    url(r'^insert/'+'name='+'(?P<name>[a-z A-Z]+)&'+'username='+'(?P<username>[a-z A-Z_]+)&'+'password='+'(?P<password>[A-Za-z0-9@#$%^&+=]{8,})&'+'college='+'(?P<college>[a-zA-Z_]+)',views.insert),
+    #url(r'^gd/'+'name='+'(?P<name>[a-z A-Z]+)&'+'username='+'(?P<username>[a-z A-Z_]*)&'+'password='+'(?P<password>[A-Za-z0-9@#$%^&+=]{8,})&'+'college='+'(?P<college>[a-zA-Z_]+)',views.getdata),
+    #url(r'^getdata/'+'name='+'(?P<name>[a-z A-Z]+)&'+'username='+'(?P<username>[a-z A-Z_]*)',views.getdata),
+    url(r'^getdata/'+'name='+'(?P<name>[a-z A-Z_]+)&'+'username='+'(?P<username>[a-z A-Z_]+)',views.getdata),
     #url(r'^check/',views.add),
     
     url(r'^admin/',admin.site.urls),
